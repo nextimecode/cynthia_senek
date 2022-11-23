@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import Image from 'next/image'
 import {
   Box,
@@ -11,7 +10,6 @@ import {
   PopoverContent,
   Container,
   Button,
-  useToast,
   useColorModeValue,
   HStack,
   useColorMode,
@@ -29,11 +27,9 @@ import {
 } from '@chakra-ui/icons'
 import { FaInstagram } from 'react-icons/fa'
 import { NavItem } from '../../../types/LandingPageItems'
-import { useAuth } from '../../../contexts/AuthContext'
-import { translateErrorCode } from '../../../utils/translateErrorCode'
+
 import { useRouter } from 'next/router'
-import { LogoNext } from '../../atoms/LogoNext'
-import colors from '../../../theme/colors'
+
 import Link from 'next/link'
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
@@ -125,21 +121,6 @@ const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
     </Stack>
   )
 }
-
-const NAV_ITEMS_LOGGED: Array<NavItem> = [
-  {
-    label: 'Bolões',
-    href: '/boloes'
-  },
-  {
-    label: 'Criar Bolao',
-    href: '/criar-bolao'
-  },
-  {
-    label: 'Configurações',
-    href: '/settings'
-  }
-]
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure()
