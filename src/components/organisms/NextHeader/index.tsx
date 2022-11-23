@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import Image from 'next/image'
 import {
   Box,
@@ -11,18 +10,26 @@ import {
   PopoverContent,
   Container,
   Button,
-  useToast,
   useColorModeValue,
   HStack,
-  useColorMode
+  useColorMode,
+  Collapse,
+  useDisclosure,
+  IconButton
 } from '@chakra-ui/react'
-import { ChevronRightIcon, SunIcon, MoonIcon } from '@chakra-ui/icons'
+import {
+  ChevronRightIcon,
+  SunIcon,
+  MoonIcon,
+  HamburgerIcon,
+  CloseIcon,
+  ChevronDownIcon
+} from '@chakra-ui/icons'
+import { FaInstagram } from 'react-icons/fa'
 import { NavItem } from '../../../types/LandingPageItems'
-import { useAuth } from '../../../contexts/AuthContext'
-import { translateErrorCode } from '../../../utils/translateErrorCode'
+
 import { useRouter } from 'next/router'
-import { LogoNext } from '../../atoms/logoNext'
-import colors from '../../../theme/colors'
+
 import Link from 'next/link'
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
@@ -115,20 +122,65 @@ const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
   )
 }
 
-const NAV_ITEMS_LOGGED: Array<NavItem> = [
-  {
-    label: 'Bolões',
-    href: '/boloes'
-  },
-  {
-    label: 'Criar Bolao',
-    href: '/criar-bolao'
-  },
-  {
-    label: 'Configurações',
-    href: '/settings'
-  }
-]
+const MobileNavItem = ({ label, children, href }: NavItem) => {
+  const { isOpen, onToggle } = useDisclosure()
+
+  return (
+    <Stack spacing={4} onClick={children && onToggle}>
+      <Flex
+        py={2}
+        as={Link}
+        href={href ?? '#'}
+        justify={'space-between'}
+        align={'center'}
+        _hover={{
+          textDecoration: 'none'
+        }}
+      >
+        <Text fontWeight={600} color={'white'} _hover={{ color: 'next-primary' }}>
+          {label}
+        </Text>
+        {children && (
+          <Icon
+            as={ChevronDownIcon}
+            transition={'all .25s ease-in-out'}
+            transform={isOpen ? 'rotate(180deg)' : ''}
+            w={6}
+            h={6}
+          />
+        )}
+      </Flex>
+
+      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
+        <Stack
+          mt={2}
+          pl={4}
+          borderLeft={1}
+          borderStyle={'solid'}
+          borderColor={'gray.700'}
+          align={'start'}
+        >
+          {children &&
+            children.map(child => (
+              <Link key={child.label} href={child.href}>
+                {child.label}
+              </Link>
+            ))}
+        </Stack>
+      </Collapse>
+    </Stack>
+  )
+}
+
+const MobileNav = ({ navItems = NAV_ITEMS }: Props) => {
+  return (
+    <Stack bg={'gray.800'} p={4} display={{ md: 'none' }}>
+      {navItems.map(navItem => (
+        <MobileNavItem key={navItem.label} {...navItem} />
+      ))}
+    </Stack>
+  )
+}
 
 type Props = {
   isLogged?: boolean
@@ -142,97 +194,70 @@ type Props = {
 }
 
 const NextHeader = ({
-  isLogged = true,
+  navItems = NAV_ITEMS,
   logoSrc = '/images/logos/logo_nextime.svg',
-  logoWidth = 106,
+  logoWidth = 146,
   logoHeight = 45,
   logoAlt = 'NeXTIME Logo',
   logoSubtitle,
-  logoSubtitleColor = 'next-blue.400'
+  logoSubtitleColor = 'next-primary'
 }: Props) => {
-  const navItems = isLogged ? NAV_ITEMS_LOGGED : NAV_ITEMS
-  const router = useRouter()
-  const toast = useToast()
+  const { isOpen, onToggle } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
-  const { user, logout } = useAuth()
-  let buttonText
-  if (user && !(router.pathname === '/') && !router.pathname.includes('blog')) {
-    buttonText = 'SAIR'
-  } else {
-    buttonText = 'LOGIN'
-  }
-  async function handleLogout() {
-    try {
-      await logout()
-    } catch (e) {
-      Sentry.captureException(e)
-      toast({
-        title: 'Tivemos um problema.',
-        description: translateErrorCode((e as Error).message),
-        status: 'error',
-        duration: 9000,
-        isClosable: true
-      })
-    }
-  }
 
-  function handleSubmit() {
-    if (user && !(router.pathname === '/') && !router.pathname.includes('blog')) {
-      handleLogout()
-    } else {
-      router.push('/login')
-    }
-  }
-  const logoColor = useColorModeValue('black', 'white')
-  const buttonBgColor = useColorModeValue('gray.300', 'gray.700')
   return (
-    <Box borderBottom={1} borderStyle={'solid'} borderColor={'next-primary'}>
+    <Box borderBottom={1} borderStyle={'solid'} borderColor={'gray.700'}>
       <Container maxW="container.lg">
         <Flex color={'gray.600'} minH={'70px'} align={'center'}>
-          <Link href={'/'}>
-            <Flex justify={{ base: 'center' }} alignItems={'center'}>
-              {logoSrc === '/images/logos/logo_nextime.svg' && (
-                <Image src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight} />
-              )}
-              {logoSrc === '/images/logos/next.svg' && (
-                <LogoNext colorPrimary={colors['next-primary']} color={logoColor} />
-              )}
-              {logoSubtitle && (
-                <Box ms={2} px={2} borderLeft={'4px'} borderColor="next-primary">
-                  <Text fontSize={{ base: 'lg', lg: 'xl' }} color={logoSubtitleColor}>
-                    {logoSubtitle}
-                  </Text>
-                </Box>
-              )}
-            </Flex>
-          </Link>
-          <HStack flex={{ base: 1 }} gap={1} justify={{ base: 'end' }} alignItems={'center'}>
-            <Flex display={{ base: 'none', sm: 'flex' }} me={4}>
-              <DesktopNav navItems={navItems} />
-            </Flex>
-            <Button bg={buttonBgColor} aria-label="Definir tema" onClick={toggleColorMode}>
-              {colorMode === 'light' ? (
-                <Flex gap={2}>
-                  <MoonIcon color={'black'} />
-                </Flex>
-              ) : (
-                <Flex gap={2}>
-                  <SunIcon color={'white'} />
-                </Flex>
-              )}
-            </Button>
-            <Button
-              bg={'next-primary'}
-              color={'white'}
-              _hover={{
-                bg: 'blue.500'
-              }}
-              onClick={() => handleSubmit()}
-            >
-              {buttonText}
-            </Button>
-          </HStack>
+          <Flex flex={{ base: 1 }} display={{ base: 'flex', md: 'none' }}>
+            <IconButton
+              onClick={onToggle}
+              icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+            />
+          </Flex>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center' }} alignItems={'center'}>
+            <Image src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight} />
+            {logoSubtitle && (
+              <Text fontSize={{ base: 'lg', lg: 'xl' }} color={logoSubtitleColor}>
+                {logoSubtitle}
+              </Text>
+            )}
+          </Flex>
+          <Flex display={{ base: 'none', md: 'flex' }}>
+            <DesktopNav navItems={navItems} />
+          </Flex>
+
+          <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
+            <HStack spacing={{ base: 3, md: 6 }}>
+              <Link href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
+                <Icon
+                  color="next-gray"
+                  _hover={{ color: 'next-primary' }}
+                  as={FaInstagram}
+                  w={6}
+                  h={6}
+                />
+              </Link>
+              <Button aria-label="Definir tema" onClick={toggleColorMode}>
+                {colorMode === 'light' ? (
+                  <Flex gap={2}>
+                    <MoonIcon color={'black'} />
+                  </Flex>
+                ) : (
+                  <Flex gap={2}>
+                    <SunIcon color={'white'} />
+                  </Flex>
+                )}
+              </Button>
+            </HStack>
+          </Stack>
         </Flex>
+
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav navItems={navItems} />
+        </Collapse>
       </Container>
     </Box>
   )

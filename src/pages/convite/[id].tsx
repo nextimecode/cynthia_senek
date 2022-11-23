@@ -1,10 +1,7 @@
 import { useRouter } from 'next/router'
-import NextTemplateLandingPage from '../../components/templates/NextTemplateLandingPage'
+import { NextTemplateLandingPage } from '../../components/templates/NextTemplateLandingPage'
 import { items } from '../../data'
-
 import api from '../../services/api'
-
-// components
 import { useCallback, useEffect, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 
