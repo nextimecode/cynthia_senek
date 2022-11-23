@@ -1,4 +1,4 @@
-schema: https://api-sa-east-1.hygraph.com/v2/cl8u2uqs254zm01t8dzq24aac/master
+schema: https://api-sa-east-1.hygraph.com/v2/claoe1hj44lv301t736bvf51w/master
 documents: './src/graphql/**/*.graphql'
 generates:
   ./src/graphql/generated.ts:

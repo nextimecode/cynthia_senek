@@ -1,13 +1,4 @@
-import {
-  Avatar,
-  Box,
-  chakra,
-  Container,
-  Flex,
-  Icon,
-  SimpleGrid,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Avatar, Box, chakra, Flex, Icon, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 
 const testimonials = [
   {

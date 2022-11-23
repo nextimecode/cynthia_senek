@@ -1,4 +1,4 @@
-import { Stack, Flex, Button, Text, VStack, useBreakpointValue } from '@chakra-ui/react'
+import { Stack, Flex, Text, VStack, useBreakpointValue } from '@chakra-ui/react'
 
 export function NextWithBackgroundImage() {
   return (

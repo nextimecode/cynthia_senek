@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader from '../../organisms/NextHeader'
-import { Box, Container } from '@chakra-ui/react'
-import Footer from '../../organisms/Footer'
-import MobileMenu from '../../organisms/MobileMenu'
 import NextFooter from '../../organisms/NextFooter'
 import { items } from '../../../data'
 
