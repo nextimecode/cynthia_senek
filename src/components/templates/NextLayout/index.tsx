@@ -18,7 +18,7 @@ type Props = {
   logoSubtitleColor?: string
   keywords?: Array<string>
   image?: string
-  siteName: string
+  siteName?: string
 }
 
 export const NextLayout = ({
