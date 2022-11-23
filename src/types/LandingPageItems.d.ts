@@ -9,6 +9,7 @@ export interface Layout {
   title: string
   url: string
   keywords: Array<string>
+  siteName: string
   description: string
   socialTitle: string
   socialNetwork: string

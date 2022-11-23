@@ -7,7 +7,7 @@ export const layout = {
   description:
     'O NeXTBolao é um game produzido pela empresa NeXTIME no qual você pode criar bolões para jogar com seus amigos. Você pode acompanhar a COPA de maneira divertida competindo com os seus amigos e outros.',
   keywords: ['bolão', 'bolão grátis', 'bolão copa do mundo', 'criar um bolão'],
-  siteName: 'NeXTBolao',
+  siteName: 'Cynthia Senek',
   socialTitle:
     'Você pode criar bolões para jogar com seus amigos. Você pode acompanhar a COPA de maneira divertida competindo com os seus amigos e outros.',
   socialImageUrl: 'https:/bolao.nextime.com.br/images/image_page.png',
