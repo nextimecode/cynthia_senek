@@ -1,7 +1,7 @@
 import { Box, Heading, Container, Text, Button, Stack } from '@chakra-ui/react'
 import Link from 'next/link'
 
-export default function NextCallToActionWithAnnotation() {
+export function NextCallToActionWithAnnotation() {
   return (
     <>
       <Container maxW={'3xl'}>

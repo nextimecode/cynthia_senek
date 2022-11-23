@@ -1,21 +1,3 @@
-export interface NextCallToAction {
-  isLoading?: boolean
-  id?: string
-  title: string
-  text: string
-  color?: string
-  textButton?: string
-  image: string
-  url: string
-  width: number
-  height: number
-  directionMd?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
-  directionBase?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
-  poolsCount?: number
-  guessesCount?: number
-  usersCount?: number
-}
-
 export interface NavItem {
   label: string
   subLabel?: string

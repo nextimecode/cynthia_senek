@@ -1,4 +1,5 @@
-import { LandingPageItems, NextCallToAction } from '../types/LandingPageItems'
+import { NextCallToActionProps } from '../components/organisms/NextCallToAction'
+import { LandingPageItems } from '../types/LandingPageItems'
 
 export const layout = {
   title: 'NeXTBolao | Bolões',
@@ -18,12 +19,11 @@ export const layout = {
   logoSubtitleColor: 'next-primary'
 }
 
-export const nextCallToActionItems: Array<NextCallToAction> = [
+export const nextCallToActionItems: Array<NextCallToActionProps> = [
   {
     id: 'hero',
     title: 'Crie seu próprio bolão da copa e compartilhe entre amigos!',
     text: 'Após criar seu bolão, você receberá um código único que poderá usar para convidar outras pessoas 🚀',
-    color: '',
     textButton: 'Quero criar meu bolão',
     image: '/images/home/image1.png',
     url: '/cadastro',

@@ -1,37 +1,16 @@
 import React from 'react'
-import NextLayout from '../NextLayout'
-import NextCallToActionWithAnnotation from '../../organisms/NextCallToActionWithAnnotation'
-import { LandingPageItems } from '../../../types/LandingPageItems'
-import NextCallToAction from '../../organisms/NextCallToAction'
+import { NextLayout } from '../NextLayout'
+import { NextCallToActionWithAnnotation } from '../../organisms/NextCallToActionWithAnnotation'
+import { NextCallToAction, NextCallToActionProps } from '../../organisms/NextCallToAction'
 
-export type NextTemplateLandingPageProps = {
-  items: LandingPageItems
-  idWhoInvited?: string | string[] | undefined
-  poolsCount?: number
-  guessesCount?: number
-  usersCount?: number
-  isLoading?: boolean
-}
-
-const NextTemplateLandingPage = ({
-  items,
-  idWhoInvited,
-  poolsCount,
-  guessesCount,
-  usersCount,
-  isLoading
-}: NextTemplateLandingPageProps) => {
-  if (idWhoInvited && typeof idWhoInvited === 'string') {
-    localStorage.setItem('idWhoInvited', idWhoInvited)
-  }
+export const NextTemplateLandingPage = ({ items }: any) => {
   return (
-    <NextLayout isLogged={false} title={'NeXTBolao | Home'}>
+    <NextLayout isLogged={false} title={items.layout.title}>
       {items.hasNextCallToActionWithAnnotation && <NextCallToActionWithAnnotation />}
-      {items.nextCallToActionItems?.map((item, index) => (
+      {items.nextCallToActionItems?.map((item: NextCallToActionProps) => (
         <NextCallToAction
-          isLoading={isLoading}
           id={item.id}
-          key={index}
+          key={item.id}
           title={item.title}
           text={item.text}
           image={item.image}
@@ -40,13 +19,8 @@ const NextTemplateLandingPage = ({
           width={item.width}
           height={item.height}
           url={item.url}
-          poolsCount={poolsCount}
-          guessesCount={guessesCount}
-          usersCount={usersCount}
         />
       ))}
     </NextLayout>
   )
 }
-
-export default NextTemplateLandingPage

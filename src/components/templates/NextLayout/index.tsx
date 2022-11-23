@@ -6,8 +6,6 @@ import Footer from '../../organisms/Footer'
 import MobileMenu from '../../organisms/MobileMenu'
 import NextFooter from '../../organisms/NextFooter'
 import { items } from '../../../data'
-import { useAuth } from '../../../contexts/AuthContext'
-import Link from 'next/link'
 
 type Props = {
   isLogged?: boolean
@@ -21,7 +19,7 @@ type Props = {
   image?: string
 }
 
-const NextLayout = ({
+export const NextLayout = ({
   isLogged = true,
   children,
   title = items.layout.title,
@@ -33,8 +31,6 @@ const NextLayout = ({
   keywords = ['bolão'],
   image = 'https://bolao.nextime.com.br/images/image_page.png'
 }: PropsWithChildren<Props>) => {
-  const { user } = useAuth()
-
   return (
     <>
       <Head>
@@ -60,27 +56,9 @@ const NextLayout = ({
         logoSubtitle={logoSubtitle}
         logoSubtitleColor={logoSubtitleColor}
       />
-      {(user || !isLogged) && (
-        <Container maxW="container.lg" pt={4} pb={'80px'}>
-          <main>{children}</main>
-        </Container>
-      )}
-      {!user && isLogged && (
-        <Center height={'50Vh'}>
-          <Link href="/login">
-            <Button
-              color="white"
-              bg={'next-primary'}
-              _hover={{
-                bg: 'next-blue.400',
-                color: 'white'
-              }}
-            >
-              Fazer login
-            </Button>
-          </Link>
-        </Center>
-      )}
+      <Container maxW="container.lg" pt={4} pb={'80px'}>
+        <main>{children}</main>
+      </Container>
       {!isLogged && <NextFooter />}
       {isLogged && (
         <>
@@ -95,5 +73,3 @@ const NextLayout = ({
     </>
   )
 }
-
-export default NextLayout
