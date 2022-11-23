@@ -2,7 +2,7 @@ import { NextCallToActionProps } from '../components/organisms/NextCallToAction'
 import { LandingPageItems } from '../types/LandingPageItems'
 
 export const layout = {
-  title: 'NeXTBolao | Bolões',
+  title: 'Cynthia Senek | Home',
   url: 'https://bolao.nextime.com.br/',
   description:
     'O NeXTBolao é um game produzido pela empresa NeXTIME no qual você pode criar bolões para jogar com seus amigos. Você pode acompanhar a COPA de maneira divertida competindo com os seus amigos e outros.',

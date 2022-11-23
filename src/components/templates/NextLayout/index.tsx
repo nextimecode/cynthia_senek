@@ -9,7 +9,7 @@ import { items } from '../../../data'
 
 type Props = {
   isLogged?: boolean
-  url: string
+  url?: string
   title?: string
   description?: string
   logoSrc?: string
