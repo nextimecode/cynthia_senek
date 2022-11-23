@@ -9,13 +9,14 @@ export interface Layout {
   title: string
   url: string
   keywords: Array<string>
+  siteName: string
   description: string
   socialTitle: string
   socialNetwork: string
   logoSrc: string
   logoHeight: number
-  logoSubtitle: string
-  logoSubtitleColor: string
+  logoSubtitle?: string
+  logoSubtitleColor?: string
 }
 
 export interface LandingPageItems {

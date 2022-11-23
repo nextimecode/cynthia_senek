@@ -217,7 +217,7 @@ const NextHeader = ({
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center' }} alignItems={'center'}>
+          <Flex flex={{ base: 1 }} alignItems={'center'}>
             <Image src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight} />
             {logoSubtitle && (
               <Text fontSize={{ base: 'lg', lg: 'xl' }} color={logoSubtitleColor}>
@@ -228,7 +228,6 @@ const NextHeader = ({
           <Flex display={{ base: 'none', md: 'flex' }}>
             <DesktopNav navItems={navItems} />
           </Flex>
-
           <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
             <HStack spacing={{ base: 3, md: 6 }}>
               <Link href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
@@ -241,20 +240,11 @@ const NextHeader = ({
                 />
               </Link>
               <Button aria-label="Definir tema" onClick={toggleColorMode}>
-                {colorMode === 'light' ? (
-                  <Flex gap={2}>
-                    <MoonIcon color={'black'} />
-                  </Flex>
-                ) : (
-                  <Flex gap={2}>
-                    <SunIcon color={'white'} />
-                  </Flex>
-                )}
+                {colorMode === 'light' ? <MoonIcon color={'black'} /> : <SunIcon color={'white'} />}
               </Button>
             </HStack>
           </Stack>
         </Flex>
-
         <Collapse in={isOpen} animateOpacity>
           <MobileNav navItems={navItems} />
         </Collapse>

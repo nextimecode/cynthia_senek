@@ -1,14 +1,12 @@
 import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader from '../../organisms/NextHeader'
-import { Box, Container } from '@chakra-ui/react'
-import Footer from '../../organisms/Footer'
-import MobileMenu from '../../organisms/MobileMenu'
 import NextFooter from '../../organisms/NextFooter'
 import { items } from '../../../data'
 
 type Props = {
   isLogged?: boolean
+  url?: string
   title?: string
   description?: string
   logoSrc?: string
@@ -17,11 +15,13 @@ type Props = {
   logoSubtitleColor?: string
   keywords?: Array<string>
   image?: string
+  siteName?: string
 }
 
 export const NextLayout = ({
   isLogged = true,
   children,
+  url = items.layout.url,
   title = items.layout.title,
   description = items.layout.description,
   logoSrc = items.layout.logoSrc,
@@ -29,7 +29,8 @@ export const NextLayout = ({
   logoSubtitle = items.layout.logoSubtitle,
   logoSubtitleColor = items.layout.logoSubtitleColor,
   keywords = ['bolão'],
-  image = 'https://bolao.nextime.com.br/images/image_page.png'
+  image = '/images/image_page.png',
+  siteName = items.layout.siteName
 }: PropsWithChildren<Props>) => {
   return (
     <>
@@ -37,18 +38,17 @@ export const NextLayout = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords?.join(', ')} />
-        <meta property="og:url" content="https://bolao.nextime.com.br/" />
+        <meta property="og:url" content={url} />
         <meta property="og:type" content="page" />
         <meta property="og:title" content={title} />
         <meta property="og:image" content={image} />
         <meta property="og:description" content={description} />
-        <meta property="og:site_name" content="NeXTBolao" />
-        <meta property="article:author" content="NeXTIME" />
+        <meta property="og:site_name" content={siteName} />
+        <meta property="article:author" content={siteName} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta property="twitter:image:src" content={image} />
       </Head>
-
       <NextHeader
         isLogged={isLogged}
         logoSrc={logoSrc}
@@ -56,20 +56,8 @@ export const NextLayout = ({
         logoSubtitle={logoSubtitle}
         logoSubtitleColor={logoSubtitleColor}
       />
-      <Container maxW="container.lg" pt={4} pb={'80px'}>
-        <main>{children}</main>
-      </Container>
-      {!isLogged && <NextFooter />}
-      {isLogged && (
-        <>
-          <Box display={['none', 'block']}>
-            <Footer />
-          </Box>
-          <Box display={['block', 'none']}>
-            <MobileMenu />
-          </Box>
-        </>
-      )}
+      <main>{children}</main>
+      <NextFooter />
     </>
   )
 }

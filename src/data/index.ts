@@ -2,20 +2,19 @@ import { NextCallToActionProps } from '../components/organisms/NextCallToAction'
 import { LandingPageItems } from '../types/LandingPageItems'
 
 export const layout = {
-  title: 'NeXTBolao | Bolões',
+  title: 'Cynthia Senek | Home',
   url: 'https://bolao.nextime.com.br/',
   description:
     'O NeXTBolao é um game produzido pela empresa NeXTIME no qual você pode criar bolões para jogar com seus amigos. Você pode acompanhar a COPA de maneira divertida competindo com os seus amigos e outros.',
   keywords: ['bolão', 'bolão grátis', 'bolão copa do mundo', 'criar um bolão'],
-  siteName: 'NeXTBolao',
+  siteName: 'Cynthia Senek',
   socialTitle:
     'Você pode criar bolões para jogar com seus amigos. Você pode acompanhar a COPA de maneira divertida competindo com os seus amigos e outros.',
   socialImageUrl: 'https:/bolao.nextime.com.br/images/image_page.png',
   socialNetwork:
     'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20Pedro!%0ATenho%20dúvidas%20sobre%20o%20NeXTBolao.',
-  logoSrc: '/images/logos/next.svg',
+  logoSrc: '/images/logos/cy_logo.png',
   logoHeight: 62,
-  logoSubtitle: 'Bolao',
   logoSubtitleColor: 'next-primary'
 }
 
