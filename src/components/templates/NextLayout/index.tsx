@@ -52,7 +52,6 @@ export const NextLayout = ({
         <meta name="twitter:description" content={description} />
         <meta property="twitter:image:src" content={image} />
       </Head>
-
       <NextHeader
         isLogged={isLogged}
         logoSrc={logoSrc}
@@ -60,20 +59,8 @@ export const NextLayout = ({
         logoSubtitle={logoSubtitle}
         logoSubtitleColor={logoSubtitleColor}
       />
-      <Container maxW="container.lg" pt={4} pb={'80px'}>
-        <main>{children}</main>
-      </Container>
-      {!isLogged && <NextFooter />}
-      {isLogged && (
-        <>
-          <Box display={['none', 'block']}>
-            <Footer />
-          </Box>
-          <Box display={['block', 'none']}>
-            <MobileMenu />
-          </Box>
-        </>
-      )}
+      <main>{children}</main>
+      <NextFooter />
     </>
   )
 }

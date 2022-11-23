@@ -93,7 +93,7 @@ const PackageTier = ({ title, options, typePlan, checked = false, url }: Package
     </Stack>
   )
 }
-const NextThreeTierPricingHorizontal = () => {
+export const NextThreeTierPricingHorizontal = () => {
   return (
     <Box py={6} px={5} minH={'100vh'}>
       <Stack spacing={4} width={'100%'} direction={'column'}>
@@ -160,5 +160,3 @@ const NextThreeTierPricingHorizontal = () => {
     </Box>
   )
 }
-
-export default NextThreeTierPricingHorizontal

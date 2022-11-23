@@ -15,8 +15,8 @@ export interface Layout {
   socialNetwork: string
   logoSrc: string
   logoHeight: number
-  logoSubtitle: string
-  logoSubtitleColor: string
+  logoSubtitle?: string
+  logoSubtitleColor?: string
 }
 
 export interface LandingPageItems {

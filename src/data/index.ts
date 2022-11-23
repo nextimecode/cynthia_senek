@@ -13,9 +13,8 @@ export const layout = {
   socialImageUrl: 'https:/bolao.nextime.com.br/images/image_page.png',
   socialNetwork:
     'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20Pedro!%0ATenho%20dúvidas%20sobre%20o%20NeXTBolao.',
-  logoSrc: '/images/logos/next.svg',
+  logoSrc: '/images/logos/cy_logo.png',
   logoHeight: 62,
-  logoSubtitle: 'Bolao',
   logoSubtitleColor: 'next-primary'
 }
 
