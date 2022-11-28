@@ -86,7 +86,7 @@ const PackageTier = ({ title, options, typePlan, checked = false, url }: Package
             color={useColorModeValue(colorTextLight, colorTextDark)}
             bgColor={useColorModeValue(bgColorLight, bgColorDark)}
           >
-            QUERO JOGAR
+            QUERO CYNTHONIZAR
           </Button>
         </Link>
       </Stack>
@@ -145,7 +145,7 @@ export const NextThreeTierPricingHorizontal = () => {
           url={`${optionsButtons}Plus`}
           title={'Plus'}
           checked={true}
-          typePlan="R$77,70/mês"
+          typePlan="R$77,70"
           options={optionsPlus}
         />
         <Divider />
@@ -153,7 +153,7 @@ export const NextThreeTierPricingHorizontal = () => {
           url={`${optionsButtons}Pro`}
           title={'Pro'}
           checked={true}
-          typePlan="R$97,70/mês"
+          typePlan="R$97,70"
           options={optionsPro}
         />
       </Stack>
