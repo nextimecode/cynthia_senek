@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import { NextHeader } from '../../organisms/NextHeader'
-import NextFooter from '../../organisms/NextFooter'
+import { NextFooter } from '../../organisms/NextFooter'
 import { items } from '../../../data'
 
 type Props = {
