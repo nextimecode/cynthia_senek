@@ -2,26 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import {
-  Box,
-  Container,
-  Grid,
-  GridItem,
-  Heading,
-  HStack,
-  Icon,
-  SimpleGrid,
-  Text
-} from '@chakra-ui/react'
+import { Box, Container, Heading, HStack, Icon, SimpleGrid, Text } from '@chakra-ui/react'
 
-import {
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
-  FaMailBulk,
-  FaYoutube,
-  FaFacebookMessenger
-} from 'react-icons/fa'
+import { FaInstagram, FaWhatsapp, FaMailBulk } from 'react-icons/fa'
 import NextimeSvg from '../../atoms/NextimeSvg'
 
 export type NextFooterProps = {

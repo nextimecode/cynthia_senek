@@ -7,8 +7,7 @@ import {
   ListIcon,
   ListItem,
   Stack,
-  Text,
-  useColorModeValue
+  Text
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { FaCheckCircle } from 'react-icons/fa'
@@ -20,41 +19,14 @@ const optionsStarter = [
   }
 ]
 
-const optionsPlus = [
-  {
-    id: 1,
-    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
-  },
-  { id: 2, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 3, desc: '30 minutos de mentoria no mês.' }
-]
-
-const optionsPro = [
-  {
-    id: 1,
-    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
-  },
-  { id: 2, desc: 'Teste analisado individualmente para saber\nqual área você se destaca.' },
-  { id: 3, desc: '1 hora de mentoria no mês.' }
-]
-
-const optionsButtons =
-  'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20Pedro!%0AGostaria%20de%20participar%20da%20mentoria%20Plano%20'
-
 interface PackageTierProps {
   title: string
   options: Array<{ id: number; desc: string }>
-  typePlan: string
+  typePlan?: string
   checked?: boolean
   url: string
 }
-const PackageTier = ({ title, options, typePlan, checked = false, url }: PackageTierProps) => {
-  const colorTextLight = checked ? 'white' : 'next-blue.400'
-  const bgColorLight = checked ? 'purple.400' : 'gray.300'
-
-  const colorTextDark = checked ? 'white' : 'next-blue.400'
-  const bgColorDark = checked ? 'next-blue.400' : 'gray.300'
-
+const PackageTier = ({ title, options, typePlan, url }: PackageTierProps) => {
   return (
     <Stack
       p={3}
@@ -82,9 +54,12 @@ const PackageTier = ({ title, options, typePlan, checked = false, url }: Package
       <Stack>
         <Link href={url}>
           <Button
-            size="md"
-            color={useColorModeValue(colorTextLight, colorTextDark)}
-            bgColor={useColorModeValue(bgColorLight, bgColorDark)}
+            color="white"
+            bg={'next-primary'}
+            _hover={{
+              bg: 'next-purple.400',
+              color: 'white'
+            }}
           >
             QUERO CYNTHONIZAR
           </Button>
@@ -95,7 +70,7 @@ const PackageTier = ({ title, options, typePlan, checked = false, url }: Package
 }
 export const NextThreeTierPricingHorizontal = () => {
   return (
-    <Box py={6} px={5} minH={'100vh'}>
+    <Box py={6} px={5}>
       <Stack spacing={4} width={'100%'} direction={'column'}>
         <Stack
           p={5}
@@ -117,7 +92,7 @@ export const NextThreeTierPricingHorizontal = () => {
             textAlign={'center'}
           >
             <Heading size={'lg'}>
-              Escolha o Plano Certo <Text color="next-blue.400">Para Você</Text>
+              Escolha o momento certo <Text color="next-blue.400">Para Você</Text>
             </Heading>
           </Stack>
           <Stack
@@ -126,21 +101,17 @@ export const NextThreeTierPricingHorizontal = () => {
               md: '60%'
             }}
           >
-            <Text textAlign={'center'}>
-              Todos os passos para o pagamento e entrada nos grupos serão explicado no whatsapp após
-              a escolha do plano. Basta clicar em um dos botões e será redirecionado.
-            </Text>
+            <Text textAlign={'center'}>Clique no botão e agende comigo sua mentoria.</Text>
           </Stack>
         </Stack>
         <Divider />
         <PackageTier
-          url={'https://chat.whatsapp.com/BUvZGzSuqziJ3VWYYTilP7'}
+          url={'https://calendly.com/senekcynthia/2'}
           title={'Start'}
           checked={true}
-          typePlan="GRÁTIS"
           options={optionsStarter}
         />
-        <Divider />
+        {/* <Divider />
         <PackageTier
           url={`${optionsButtons}Plus`}
           title={'Plus'}
@@ -155,7 +126,7 @@ export const NextThreeTierPricingHorizontal = () => {
           checked={true}
           typePlan="R$97,70"
           options={optionsPro}
-        />
+        /> */}
       </Stack>
     </Box>
   )

@@ -16,9 +16,9 @@ type Props = {
 
 export const NextHeader = ({
   logoSrc = '/images/logos/logo_nextime.svg',
-  logoWidth = 146,
-  logoHeight = 45,
-  logoAlt = 'NeXTIME Logo',
+  logoWidth = 250,
+  logoHeight = 52,
+  logoAlt = 'Cynthia Senek Logo',
   logoSubtitle,
   logoSubtitleColor = 'next-primary'
 }: Props) => {
