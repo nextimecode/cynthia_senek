@@ -14,7 +14,7 @@ type Props = {
   logoSubtitleColor?: string
 }
 
-const NextHeader = ({
+export const NextHeader = ({
   logoSrc = '/images/logos/logo_nextime.svg',
   logoWidth = 146,
   logoHeight = 45,
@@ -37,5 +37,3 @@ const NextHeader = ({
     </Box>
   )
 }
-
-export default NextHeader
