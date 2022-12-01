@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { NextLayout } from '../NextLayout'
-import { Box, Center, Container, Heading, Text } from '@chakra-ui/react'
+import { Box, Center, Container, Flex, Heading, Text } from '@chakra-ui/react'
 import { NextThreeTierPricingHorizontal } from '../../organisms/NextThreeTierPricingHorizontal'
 
 export const NextTemplateLandingPage = ({ items }: any) => {
@@ -73,6 +73,42 @@ export const NextTemplateLandingPage = ({ items }: any) => {
         </Box>
         <NextThreeTierPricingHorizontal />
       </Container>
+      <Box
+        backgroundImage={'url(/images/bg_folder.png)'}
+        backgroundSize={'cover'}
+        backgroundPosition={'center center'}
+        px={4}
+        py={8}
+      >
+        <Box bg={'black'} color={'white'} rounded={'3xl'} p={4} mt={4}>
+          <Text fontSize={'sm'}>
+            Ao longo dos seus 20 anos de carreira, após ter feito inúmeros cursos e técnicas de
+            atuação, workshops, novelas, filmes e séries, percebeu que o processo de criatividade
+            está diretamente conectado ao processo emocional. A mentoria artística de
+            autoconhecimento que Cynthia desenvolve vem na contra-mão da grande parte do mercado
+            artístico que incentiva artistas à buscarem técnica. Aumentar a capacidade de ouvir sua
+            intuição artística na frequência da sua sabedoria interior é o objetivo principal do seu
+            trabalho como mentora.
+          </Text>
+        </Box>
+        <Box display={'flex'} alignItems={'center'} ps={8}>
+          <Heading size={'md'}>Quem é Cynthia Senek?</Heading>
+          <Image src="/images/cy_fundo-removebg.png" alt="Cynthia" width={200} height={200} />
+        </Box>
+        <Box bg={'black'} color={'white'} rounded={'3xl'} p={4}>
+          <Text fontSize={'xs'}>
+            Cynthia Senek atriz e mentora artística, nascida em cima dos palcos na cidade do teatro:
+            Curitiba, Paraná. Fez sua estreia na televisão ainda criança em 2002. Integrou o elenco
+            de novelas na Rede Globo como Sete vidas, MALHAÇÃO e a Dona do pedaço. Atuou na primeira
+            série brasileira produzida pela NETFLIX no Brasil &quot;3%&quot; e logo depois em
+            &quot;Temporada de Verão&quot;, ambas no elenco principal. No cinema, seu trabalho mais
+            recente é o longa-metragem &quot;Deserto Particular&quot;, de Aly Muritiba que foi o
+            representante do Brasil no Oscar em 2022. Seu futuro em 2023 promete bons lançamentos
+            com a série “Ta tudo certo” a ser lançada pela Disney e a série “Musa Música” a ser
+            lançada na Globoplay. Ambas também atuando no elenco principal.
+          </Text>
+        </Box>
+      </Box>
     </NextLayout>
   )
 }

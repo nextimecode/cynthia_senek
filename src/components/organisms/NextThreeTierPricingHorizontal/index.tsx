@@ -15,7 +15,7 @@ import { FaCheckCircle } from 'react-icons/fa'
 const optionsStarter = [
   {
     id: 1,
-    desc: 'Quer sintonizar com seu artista em 2023?\nProcesso seletivo aberto\nMentoria em grupo e individual. JAN/FEV/MAR 2023'
+    desc: 'Processo seletivo aberto JAN/FEV/MAR 2023\nMentoria em grupo e individual.'
   }
 ]
 
@@ -26,26 +26,13 @@ interface PackageTierProps {
   checked?: boolean
   url: string
 }
-const PackageTier = ({ title, options, typePlan, url }: PackageTierProps) => {
+const PackageTier = ({ options, typePlan, url }: PackageTierProps) => {
   return (
-    <Stack
-      p={3}
-      py={3}
-      justifyContent={{
-        base: 'flex-start',
-        md: 'space-around'
-      }}
-      direction={{
-        base: 'column',
-        md: 'row'
-      }}
-      alignItems={{ md: 'center' }}
-    >
-      <Heading size={'md'}>{title}</Heading>
-      <List spacing={3} textAlign="start">
+    <Stack p={3} py={3} alignItems={{ md: 'center' }}>
+      <List spacing={3}>
         {options.map((desc, id) => (
-          <ListItem key={id} whiteSpace={'pre-wrap'}>
-            <ListIcon as={FaCheckCircle} color="green.500" />
+          <ListItem key={id} whiteSpace={'pre-wrap'} textAlign={'center'}>
+            <ListIcon as={FaCheckCircle} color="next-red.200" />
             {desc.desc}
           </ListItem>
         ))}
@@ -54,14 +41,15 @@ const PackageTier = ({ title, options, typePlan, url }: PackageTierProps) => {
       <Stack>
         <Link href={url}>
           <Button
+            mt={6}
             color="white"
-            bg={'next-primary'}
+            bg={'next-purple.400'}
             _hover={{
-              bg: 'next-purple.400',
+              bg: 'next-green.400',
               color: 'white'
             }}
           >
-            QUERO CYNTHONIZAR
+            REALIZAR INSCRIÇÃO
           </Button>
         </Link>
       </Stack>
@@ -70,7 +58,7 @@ const PackageTier = ({ title, options, typePlan, url }: PackageTierProps) => {
 }
 export const NextThreeTierPricingHorizontal = () => {
   return (
-    <Box py={6} px={5}>
+    <Box pt={[16, 20]} pb={8} px={5}>
       <Stack spacing={4} width={'100%'} direction={'column'}>
         <Stack
           p={5}
@@ -91,17 +79,9 @@ export const NextThreeTierPricingHorizontal = () => {
             }}
             textAlign={'center'}
           >
-            <Heading size={'lg'}>
-              Escolha o momento certo <Text color="next-blue.400">Para Você</Text>
+            <Heading size={'lg'} color={'white'}>
+              Quer sintonizar seu artista em 2023?
             </Heading>
-          </Stack>
-          <Stack
-            width={{
-              base: '100%',
-              md: '60%'
-            }}
-          >
-            <Text textAlign={'center'}>Clique no botão e agende comigo sua mentoria.</Text>
           </Stack>
         </Stack>
         <Divider />
