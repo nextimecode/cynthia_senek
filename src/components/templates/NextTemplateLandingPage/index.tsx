@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { NextLayout } from '../NextLayout'
-import { Box, Center, Container, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Center, Container, Heading, Text } from '@chakra-ui/react'
 import { NextThreeTierPricingHorizontal } from '../../organisms/NextThreeTierPricingHorizontal'
 
 export const NextTemplateLandingPage = ({ items }: any) => {
@@ -73,15 +73,19 @@ export const NextTemplateLandingPage = ({ items }: any) => {
         </Box>
         <NextThreeTierPricingHorizontal />
       </Container>
+      <Heading display={['none', 'block']} size={'lg'} textAlign={'center'}>
+        Quem é Cynthia Senek?
+      </Heading>
       <Box
         backgroundImage={'url(/images/bg_folder.png)'}
         backgroundSize={'cover'}
         backgroundPosition={'center center'}
         px={4}
-        py={8}
+        py={[4, 0]}
+        display={['block', 'flex']}
       >
-        <Box bg={'black'} color={'white'} rounded={'3xl'} p={4} mt={4}>
-          <Text fontSize={'sm'}>
+        <Box bg={'black'} color={'white'} rounded={'3xl'} p={4} my={[0, 12]}>
+          <Text fontSize={'xs'}>
             Ao longo dos seus 20 anos de carreira, após ter feito inúmeros cursos e técnicas de
             atuação, workshops, novelas, filmes e séries, percebeu que o processo de criatividade
             está diretamente conectado ao processo emocional. A mentoria artística de
@@ -91,11 +95,13 @@ export const NextTemplateLandingPage = ({ items }: any) => {
             trabalho como mentora.
           </Text>
         </Box>
-        <Box display={'flex'} alignItems={'center'} ps={8}>
-          <Heading size={'md'}>Quem é Cynthia Senek?</Heading>
+        <Box display={'flex'} alignItems={['center', 'end']} ps={[8]} minW={{ md: '300px' }}>
+          <Heading display={['block', 'none']} size={'md'} alignContent={'center'}>
+            Quem é Cynthia Senek?
+          </Heading>
           <Image src="/images/cy_fundo-removebg.png" alt="Cynthia" width={200} height={200} />
         </Box>
-        <Box bg={'black'} color={'white'} rounded={'3xl'} p={4}>
+        <Box bg={'black'} color={'white'} rounded={'3xl'} p={4} my={[0, 12]}>
           <Text fontSize={'xs'}>
             Cynthia Senek atriz e mentora artística, nascida em cima dos palcos na cidade do teatro:
             Curitiba, Paraná. Fez sua estreia na televisão ainda criança em 2002. Integrou o elenco
