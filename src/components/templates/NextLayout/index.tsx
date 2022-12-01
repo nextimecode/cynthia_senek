@@ -3,6 +3,7 @@ import React, { PropsWithChildren } from 'react'
 import { NextHeader } from '../../organisms/NextHeader'
 import { NextFooter } from '../../organisms/NextFooter'
 import { items } from '../../../data'
+import { Box } from '@chakra-ui/react'
 
 type Props = {
   isLogged?: boolean
@@ -33,7 +34,11 @@ export const NextLayout = ({
   siteName = items.layout.siteName
 }: PropsWithChildren<Props>) => {
   return (
-    <>
+    <Box
+      backgroundImage={['url(/images/bg_mobile.png)', 'url(/images/bg.png)']}
+      backgroundSize={'cover'}
+      backgroundPosition={'center center'}
+    >
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -58,6 +63,6 @@ export const NextLayout = ({
       />
       <main>{children}</main>
       <NextFooter />
-    </>
+    </Box>
   )
 }
