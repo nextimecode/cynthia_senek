@@ -35,7 +35,7 @@ export const NextLayout = ({
 }: PropsWithChildren<Props>) => {
   return (
     <Box
-      backgroundImage={'url(/images/bg.png)'}
+      backgroundImage={['url(/images/bg_mobile.png)', 'url(/images/bg.png)']}
       backgroundSize={'cover'}
       backgroundPosition={'center center'}
     >

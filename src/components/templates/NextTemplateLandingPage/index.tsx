@@ -6,8 +6,11 @@ import { NextThreeTierPricingHorizontal } from '../../organisms/NextThreeTierPri
 export const NextTemplateLandingPage = ({ items }: any) => {
   return (
     <NextLayout isLogged={false} title={items.layout.title}>
-      <Container bg={'#FDFF9E'} maxW="container.lg" pb={6} my={4} rounded={'3xl'}>
+      <Container maxW="container.lg" pb={6} my={4} rounded={'3xl'}>
         <Box textAlign={'center'}>
+          <Center flexDirection={'column'} py={4}>
+            <Image src="/images/logos/cy_logo_degrade.png" alt="Cynthia" width={450} height={450} />
+          </Center>
           <Heading size="lg">A ARTE</Heading>
           <Heading size="lg">AS EMOÇÕES</Heading>
           <Heading size="lg">O AUTOCONHECIMENTO </Heading>
@@ -66,9 +69,6 @@ export const NextTemplateLandingPage = ({ items }: any) => {
             FREQUÊNCIA
           </Heading>
         </Box>
-        <Center flexDirection={'column'} py={4}>
-          <Image src="/images/logos/cy_logo_degrade.png" alt="Cynthia" width={200} height={200} />
-        </Center>
         <NextThreeTierPricingHorizontal />
       </Container>
     </NextLayout>
