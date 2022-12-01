@@ -58,6 +58,12 @@ export const NextTemplateLandingPage = ({ items }: any) => {
             </Text>
             .
           </Heading>
+          <Center display={['flex', 'none']} pb={4}>
+            <Image src="/images/antena.png" alt="Cynthia" width={100} height={100} />
+          </Center>
+          <Center display={['none', 'flex']} pb={4}>
+            <Image src="/images/antena.png" alt="Cynthia" width={150} height={150} />
+          </Center>
           <Heading size={['2xl', '3xl']} color={'next-dark.200'}>
             ARTISTAS SÃO
           </Heading>
