@@ -15,7 +15,7 @@ import { FaCheckCircle } from 'react-icons/fa'
 const optionsStarter = [
   {
     id: 1,
-    desc: 'Acesso a um grupo no WhatsApp\ncom dicas da área de TI, novidades na tecnologia,\nvagas de emprego e muito mais.'
+    desc: 'Quer sintonizar com seu artista em 2023?\nProcesso seletivo aberto\nMentoria em grupo e individual. JAN/FEV/MAR 2023'
   }
 ]
 
@@ -105,8 +105,14 @@ export const NextThreeTierPricingHorizontal = () => {
           </Stack>
         </Stack>
         <Divider />
-        <PackageTier
+        {/* <PackageTier
           url={'https://calendly.com/senekcynthia/2'}
+          title={'Start'}
+          checked={true}
+          options={optionsStarter}
+        /> */}
+        <PackageTier
+          url={'https://my.forms.app/form/6387bdbab200f15a82d2388d'}
           title={'Start'}
           checked={true}
           options={optionsStarter}

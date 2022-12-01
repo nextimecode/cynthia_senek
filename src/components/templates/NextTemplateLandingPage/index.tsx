@@ -6,7 +6,7 @@ import { NextThreeTierPricingHorizontal } from '../../organisms/NextThreeTierPri
 export const NextTemplateLandingPage = ({ items }: any) => {
   return (
     <NextLayout isLogged={false} title={items.layout.title}>
-      <Container maxW="container.lg" pb={6} bg={'white'} my={4}>
+      <Container bg={'#FDFF9E'} maxW="container.lg" pb={6} my={4} rounded={'3xl'}>
         <Box textAlign={'center'}>
           <Heading size="lg">A ARTE</Heading>
           <Heading size="lg">AS EMOÇÕES</Heading>
