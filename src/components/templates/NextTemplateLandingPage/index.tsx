@@ -7,8 +7,8 @@ export const NextTemplateLandingPage = ({ items }: any) => {
   return (
     <NextLayout isLogged={false} title={items.layout.title}>
       <Container maxW="container.lg" pb={6} my={4} rounded={'3xl'}>
-        <Box textAlign={'center'}>
-          <Center flexDirection={'column'} py={4}>
+        <Box textAlign={'center'} color={'white'}>
+          <Center flexDirection={'column'} pt={4} pb={8}>
             <Image src="/images/logos/cy_logo_degrade.png" alt="Cynthia" width={450} height={450} />
           </Center>
           <Heading size="lg">A ARTE</Heading>
@@ -17,27 +17,29 @@ export const NextTemplateLandingPage = ({ items }: any) => {
           <Heading size="lg">A ESPIRITUALIDADE</Heading>
           <Heading size="lg">A SEXUALIDADE</Heading>
           <Heading size="lg">E A CRIATIVIDADE SÃO</Heading>
-          <Heading size="lg" color={'next-purple.400'}>
+          <Heading size="lg" color={'next-green.400'}>
             CANAIS DE COMUNICAÇÃO{' '}
           </Heading>
-          <Heading size="lg">ENTRE CÉU E TERRA.</Heading>
-          <Heading size="lg">
+          <Heading size="lg" pb={12}>
+            ENTRE CÉU E TERRA.
+          </Heading>
+          <Heading size="lg" pb={12}>
             QUAL{' '}
-            <Text color={'next-blue.400'} as={'span'}>
+            <Text color={'next-orange.200'} as={'span'}>
               FREQUÊNCIA
             </Text>{' '}
             VOCÊ ESTÁ SINTONIZADO EM SUA VIDA?
           </Heading>
-          <Heading size="lg">
+          <Heading size="lg" pb={12}>
             NÃO TEMOS TODOS O DOM DA{' '}
             <Text color={'next-yellow.400'} as={'span'}>
               CRIATIVIDADE
             </Text>
             ?
           </Heading>
-          <Heading size="lg">
+          <Heading size="lg" pb={12}>
             PORQUE ALGUMAS PESSOAS NÃO CONSEGUEM{' '}
-            <Text color={'next-green.400'} as={'span'}>
+            <Text color={'next-purple.400'} as={'span'}>
               SINTONIZAR
             </Text>{' '}
             COM ELA?
@@ -49,23 +51,23 @@ export const NextTemplateLandingPage = ({ items }: any) => {
             </Text>
             ,
           </Heading>
-          <Heading size="lg">
+          <Heading size="lg" pb={12}>
             ABRIMOS CONEXÃO COM A{' '}
             <Text color={'next-red.200'} as={'span'}>
               FONTE SUPERIOR
             </Text>
             .
           </Heading>
-          <Heading size="lg" color={'next-blue.400'}>
+          <Heading size={['2xl', '3xl']} color={'next-dark.200'}>
             ARTISTAS SÃO
           </Heading>
-          <Heading size="lg" color={'next-purple.400'}>
+          <Heading size={['2xl', '3xl']} color={'next-dark.200'}>
             ANTENAS
           </Heading>
-          <Heading size="lg" color={'next-blue.400'}>
+          <Heading size={['2xl', '3xl']} color={'next-yellow.400'}>
             DEUS É A
           </Heading>
-          <Heading size="lg" color={'next-yellow.400'}>
+          <Heading size={['2xl', '3xl']} color={'next-yellow.400'}>
             FREQUÊNCIA
           </Heading>
         </Box>

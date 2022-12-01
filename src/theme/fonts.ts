@@ -1,6 +1,6 @@
 const fonts = {
-  heading: "'Roboto', sans-serif",
-  body: 'Open Sans'
+  heading: "'Montserrat', sans-serif",
+  body: 'Montserrat'
 }
 
 export default fonts

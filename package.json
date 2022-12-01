@@ -25,6 +25,7 @@
     "@chakra-ui/react": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@fontsource/montserrat": "^4.5.13",
     "@fontsource/open-sans": "latest",
     "@fontsource/roboto": "latest",
     "@hookform/error-message": "latest",
