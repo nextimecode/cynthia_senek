@@ -1,37 +1,33 @@
-import { Avatar, Box, chakra, Flex, Icon, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
+import { Avatar, chakra, Flex, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 
 const testimonials = [
   {
-    name: 'Brandon P.',
-    role: 'Chief Marketing Officer',
+    name: 'Carou',
+    role: 'Atriz',
     content:
-      'It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!',
-    avatar:
-      'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
+      'A mentoria mudou a minha vida! Aprendi a me conectar comigo mesmo, a me entregar para as oportunidades da vida. A Cy é um ser de luz que tem o poder de transformar a vida das pessoas. Hoje em dia me considero uma baita artista, e sou eternamente grata a Cy.💚✨️',
+    avatar: '/images/caroul.jpg'
   },
   {
-    name: 'Krysta B.',
-    role: 'Entrepreneur',
+    name: 'Manu Nahas',
+    role: 'Atriz',
     content:
-      "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
-    avatar:
-      'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
+      'Nunca me senti tao livre pra chorar, rir, brincar, gritar na vida. Foi libertador. Mas ao mesmo tempo é um desafio, se conectar com algo que a gnt perde na vida, nosso ser, nossa criança, nossa sexualidade, aquelas coisas que muitas vezes são tabu na nossa sociedade! É intensooo demais povooo. Se descobrir, se abrir, sentir é foda demaiiiiss!!',
+    avatar: '/images/manu.jpg'
   },
   {
-    name: 'Darcy L.',
-    role: 'Movie star',
+    name: 'Bruna Surita',
+    role: 'Atriz',
     content:
-      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
-    avatar:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80'
+      'A mentoria Cyntonizar mudou a minha perspectiva sobre a vida e quem eu sou. Não me considerava uma artista e, durante o processo, descobri que tinha vários bloqueios impostos pela sociedade. A Cy é uma alma de muita luz e que transforma várias vidas diariamente. O Cyntonizar é uma oportunidade para se jogar no desconhecido e viver a maior transformação interna de todas! Eu sou extremamente grata por ter participado dessa experiência 🤍',
+    avatar: '/images/bruna.jpg'
   },
   {
-    name: 'Daniel T.',
-    role: 'Musician',
+    name: 'Daniel Bonatti',
+    role: 'Professor de Inglês',
     content:
-      'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!',
-    avatar:
-      'https://images.unsplash.com/photo-1606513542745-97629752a13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'
+      'Fiz a mentoria da Cy este ano, e foi incrível! Ela entrega muito além do que promete! Os encontros são leves e intensos ao mesmo tempo, e ela nos desafia a descobrir e desafiar aqueles medos que ficam bem escondidos! E ela vive o que ensina! Quer autenticidade e mudança? Se inscreva nessa mentoria! Thank you, Cy! 🙏🏼',
+    avatar: '/images/daniel.jpg'
   }
 ]
 
@@ -90,12 +86,12 @@ function TestimonialCard(props: TestimonialCardProps) {
       }}
     >
       <Flex direction={'column'} textAlign={'left'} justifyContent={'space-between'}>
-        <chakra.p fontFamily={'Inter'} fontWeight={'medium'} fontSize={'15px'} pb={4}>
+        <chakra.p fontWeight={'medium'} fontSize={'15px'} pb={4}>
           {content}
         </chakra.p>
-        <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14}>
+        <chakra.p fontWeight={'bold'} fontSize={14}>
           {name}
-          <chakra.span fontFamily={'Inter'} fontWeight={'medium'} color={'gray.500'}>
+          <chakra.span fontWeight={'medium'} color={'gray.500'}>
             {' '}
             - {role}
           </chakra.span>

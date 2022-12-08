@@ -1,8 +1,6 @@
 import React from 'react'
 import { NextLayout } from '../NextLayout'
-// import { NextSplitWithImage } from '../../organisms/NextSplitWithImage'
 import { NextGridBlurredBackdrop } from '../../organisms/NextGridBlurredBackdrop'
-// import { NextThreeTierPricingHorizontal } from '../../organisms/NextThreeTierPricingHorizontal'
 import { NextCallToAction, NextCallToActionProps } from '../../organisms/NextCallToAction'
 import { NextHero } from '../../organisms/NextHero'
 import { Container } from '@chakra-ui/react'
@@ -21,7 +19,6 @@ export const NextTemplateLandingPage = ({ items }: any) => {
       <Container maxW="container.lg" mb={20}>
         <NextGridBlurredBackdrop />
       </Container>
-      {/* <NextSplitWithImage /> */}
       {items.nextCallToActionItems?.map((item: NextCallToActionProps) => (
         <NextCallToAction
           id={item.id}
@@ -36,7 +33,6 @@ export const NextTemplateLandingPage = ({ items }: any) => {
           url={item.url}
         />
       ))}
-      {/* <NextThreeTierPricingHorizontal /> */}
     </NextLayout>
   )
 }

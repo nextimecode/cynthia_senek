@@ -63,10 +63,10 @@ export const nextCallToActionItems = [
     id: 'marketing',
     title: 'Quem é Cynthia Senek?',
     text: '"Ao longo dos seus 20 anos de carreira, após ter feito inúmeros cursos e técnicas de atuação, workshops, novelas, filmes e séries, percebeu que o processo de criatividade está diretamente conectado ao processo emocional. A mentoria artística de autoconhecimento que Cynthia desenvolve vem na contra-mão da grande parte do mercado artístico que incentiva artistas à buscarem técnica. Aumentar a capacidade de ouvir sua intuição artística na frequência da sua sabedoria interior é o objetivo principal do seu trabalho como mentora.\n\nCynthia Senek atriz e mentora artística, nascida em cima dos palcos na cidade do teatro: Curitiba, Paraná. Fez sua estreia na televisão ainda criança em 2002. Integrou o elenco de novelas na Rede Globo como Sete vidas, MALHAÇÃO e a Dona do pedaço. Atuou na primeira série brasileira produzida pela NETFLIX no Brasil "3%" e logo depois em "Temporada de Verão", ambas no elenco principal. No cinema, seu trabalho mais recente é o longa-metragem "Deserto Particular", de Aly Muritiba que foi o representante do Brasil no Oscar em 2022. Seu futuro em 2023 promete bons lançamentos com a série “Ta tudo certo” a ser lançada pela Disney e a série “Musa Música” a ser lançada na Globoplay. Ambas também atuando no elenco principal.',
-    image: '/images/illustrations/eu2.jpeg',
+    image: '/images/quem_cy.jpg',
     url: '#investimento',
     width: 431,
-    height: 650,
+    height: 431,
     textButton: 'REALIZAR INSCRIÇÃO',
     directionMd: 'row-reverse'
   }

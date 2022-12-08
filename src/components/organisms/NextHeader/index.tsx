@@ -12,19 +12,11 @@ import {
   Button,
   useColorModeValue,
   HStack,
-  useColorMode,
   Collapse,
   useDisclosure,
   IconButton
 } from '@chakra-ui/react'
-import {
-  ChevronRightIcon,
-  SunIcon,
-  MoonIcon,
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon
-} from '@chakra-ui/icons'
+import { ChevronRightIcon, HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import { FaInstagram } from 'react-icons/fa'
 import { NavItem } from '../../../types/LandingPageItems'
 
@@ -60,17 +52,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   )
 }
 
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'Home',
-    href: '/'
-  }
-]
+const NAV_ITEMS: Array<NavItem> = []
 
 const DesktopNav = ({ navItems = NAV_ITEMS }: Props) => {
   const router = useRouter()
   const linkColor = useColorModeValue('black', 'white')
-  const linkHoverColor = 'next-primary'
+  const linkHoverColor = 'black'
   const popoverContentBgColor = 'gray.800'
 
   return (
@@ -199,10 +186,9 @@ const NextHeader = ({
   logoSubtitleColor = 'next-primary'
 }: Props) => {
   const { isOpen, onToggle } = useDisclosure()
-  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Box borderBottom={1} borderStyle={'solid'} borderColor={'gray.700'}>
+    <Box borderBottom={1} borderStyle={'solid'} borderColor={'gray.700'} bgColor={'next-primary'}>
       <Container maxW="container.lg">
         <Flex color={'gray.600'} minH={'70px'} align={'center'}>
           <Flex flex={{ base: 1 }} display={{ base: 'flex', md: 'none' }}>
@@ -235,9 +221,6 @@ const NextHeader = ({
                   h={6}
                 />
               </Link>
-              <Button aria-label="Definir tema" onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon color={'black'} /> : <SunIcon color={'white'} />}
-              </Button>
             </HStack>
           </Stack>
         </Flex>
