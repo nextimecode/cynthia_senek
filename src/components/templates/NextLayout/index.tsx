@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import NextHeader from '../../organisms/NextHeader'
-import NextFooter from '../../organisms/NextFooter'
+import { NextFooter } from '../../organisms/NextFooter'
 import { items } from '../../../data'
+import { Box } from '@chakra-ui/react'
 
 type Props = {
   isLogged?: boolean
@@ -56,7 +57,22 @@ export const NextLayout = ({
         logoSubtitle={logoSubtitle}
         logoSubtitleColor={logoSubtitleColor}
       />
-      <main>{children}</main>
+      <Box
+        bgGradient="linear(to-t,
+      #db3340,
+      #f815bd,
+      #a33da3,
+      #7842a3,
+      #2657ab,
+      #2cad59,
+      #a2cf4a,
+      #fee300,
+      #faa413,
+      #f87826,
+      #f55542)"
+      >
+        <main>{children}</main>
+      </Box>
       <NextFooter />
     </>
   )

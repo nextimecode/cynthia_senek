@@ -57,7 +57,7 @@ export default function NextTemplateSignup() {
       await updateUser(response.user, data.name)
       const fullName = data.name.split(' ')
       const firstName = fullName[0]
-      const lastName = fullName[fullName.length - 1]
+      const lastName = fullName[fullName?.length - 1]
       const myInvitationId = `${firstName.toLowerCase()}-${idInvitation()}`
       const newUser: User = {
         email: response?.user?.email,

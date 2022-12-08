@@ -1,5 +1,5 @@
 const colors = {
-  'next-primary': '#a33da3',
+  'next-primary': '#2cad59',
   'next-gray': {
     200: '#BDBDBD'
   },
