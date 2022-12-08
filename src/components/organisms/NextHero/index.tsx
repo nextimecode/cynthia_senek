@@ -55,10 +55,11 @@ export const NextHero = ({
             >
               <Link href={url}>
                 <Button
+                  color="white"
                   bg={'next-primary'}
-                  width={['100%', '50%']}
                   _hover={{
-                    bg: 'next-blue.400'
+                    bg: 'next-blue.400',
+                    color: 'white'
                   }}
                 >
                   {textButton}
@@ -73,10 +74,11 @@ export const NextHero = ({
         <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
           <Link href={url}>
             <Button
+              color="white"
               bg={'next-primary'}
-              width={['100%', '50%']}
               _hover={{
-                bg: 'next-blue.400'
+                bg: 'next-blue.400',
+                color: 'white'
               }}
             >
               {textButton}

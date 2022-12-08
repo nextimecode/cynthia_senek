@@ -29,8 +29,8 @@ export const nextHeroItem = {
 export const nextCallToActionItems = [
   {
     id: 'mentoria',
-    title: 'O que é mentoria?',
-    text: 'Mentoria é uma forma de capacitar pessoas por meio do aprendizado com alguém mais experiente na área. O mentor é, geralmente, um profissional com perfil sênior na função ou em algum tema específico, enquanto o mentorado é um iniciante. \n\n O mentor atua como um professor, não apenas para ensinar habilidades técnicas, mas também para ensinar habilidades comportamentais e ajudar no desenvolvimento da carreira do profissional. ',
+    title: 'O que eu vou aprender em uma jornada espiritual e artística disfarçada de mentoria?',
+    text: 'A ARTE. AS EMOÇÕES. O AUTOCONHECIMENTO. A ESPIRITUALIDADE. A SEXUALIDADE. E A CRIATIVIDADE SÃO CANAIS DE COMUNICAÇÃO ENTRE CÉU E TERRA. QUAL FREQUÊNCIA VOCÊ ESTÁ SINTONIZADO EM SUA VIDA? NÃO TEMOS TODOS O DOM DA CRIATIVIDADE? PORQUE ALGUMAS PESSOAS NÃO CONSEGUEM SINTONIZAR COM ELA? QUANDO SINTONIZADOS COM A SABEDORIA INTERIOR, ABRIMOS CONEXÃO COM A FONTE SUPERIOR.',
     image: '/images/cy1.jpg',
     textButton: 'REALIZAR INSCRIÇÃO',
     url: '#mentoria',

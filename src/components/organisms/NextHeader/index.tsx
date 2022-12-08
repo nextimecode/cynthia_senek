@@ -179,7 +179,7 @@ type Props = {
 export const NextHeader = ({
   logoSrc = '/images/logos/logo_nextime.svg',
   logoWidth = 350,
-  logoHeight = 100,
+  logoHeight = 150,
   logoAlt = 'Cynthia Senek Logo',
   logoSubtitle,
   logoSubtitleColor = 'next-primary'
@@ -187,7 +187,7 @@ export const NextHeader = ({
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Box borderBottom={1} borderStyle={'solid'} borderColor={'gray.700'} bgColor={'next-primary'}>
+    <Box borderBottom={1} borderStyle={'solid'} borderColor={'gray.700'} bgColor={'#fee300'}>
       <Container maxW="container.lg">
         <Flex color={'gray.600'} minH={'70px'} align={'center'}>
           <Flex flex={{ base: 1 }} display={{ base: 'flex', md: 'none' }}>
@@ -198,7 +198,7 @@ export const NextHeader = ({
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} alignItems={'center'}>
+          <Flex alignItems={'center'}>
             <Image src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight} />
             {logoSubtitle && (
               <Text fontSize={{ base: 'lg', lg: 'xl' }} color={logoSubtitleColor}>
