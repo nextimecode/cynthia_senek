@@ -64,10 +64,6 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
     href: '/'
-  },
-  {
-    label: 'Blog',
-    href: '/blog'
   }
 ]
 
@@ -230,7 +226,7 @@ const NextHeader = ({
           </Flex>
           <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
             <HStack spacing={{ base: 3, md: 6 }}>
-              <Link href={'https://www.instagram.com/nextimetec/'} target={'_blank'}>
+              <Link href={'https://www.instagram.com/cynthonizar/'} target={'_blank'}>
                 <Icon
                   color="next-gray"
                   _hover={{ color: 'next-primary' }}

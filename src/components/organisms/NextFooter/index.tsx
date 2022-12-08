@@ -94,7 +94,7 @@ const NextFooter = () => {
                     h={16}
                   />
                 </Link>
-                <Link href={'https://www.instagram.com/nextimetec/'}>
+                <Link href={'https://www.instagram.com/cynthonizar/'}>
                   <Icon
                     color="white"
                     _hover={{ color: 'next-dark' }}
