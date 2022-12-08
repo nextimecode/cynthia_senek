@@ -1,4 +1,4 @@
-import React from 'react'
+import Image from 'next/image'
 import { NextLayout } from '../NextLayout'
 import { NextGridBlurredBackdrop } from '../../organisms/NextGridBlurredBackdrop'
 import { NextCallToAction, NextCallToActionProps } from '../../organisms/NextCallToAction'

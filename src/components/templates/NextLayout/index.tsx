@@ -34,7 +34,11 @@ export const NextLayout = ({
   siteName = items.layout.siteName
 }: PropsWithChildren<Props>) => {
   return (
-    <>
+    <Box
+      backgroundImage={['url(/images/bg_mobile.png)', 'url(/images/bg.png)']}
+      backgroundSize={'cover'}
+      backgroundPosition={'center center'}
+    >
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -74,6 +78,6 @@ export const NextLayout = ({
         <main>{children}</main>
       </Box>
       <NextFooter />
-    </>
+    </Box>
   )
 }
