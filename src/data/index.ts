@@ -21,7 +21,7 @@ export const layout = {
 export const nextHeroItem = {
   image: '/images/tv-removebg-preview.png',
   title: 'ARTISTAS SÃO ANTENAS, DEUS É A FREQUÊNCIA',
-  text: 'Quer sintonizar seu artista em 2023? Processo seletivo aberto JAN/FEV/MAR 2023. Mentoria em grupo e individual.',
+  text: 'Quer sintonizar seu artista em 2023? Processo seletivo aberto JAN/FEV/MAR 2023.',
   textButton: 'REALIZAR INSCRIÇÃO',
   url: 'https://api.whatsapp.com/send?phone=5511972436305&text=Ol%C3%A1,%20Pedro!%0ATenho%20dúvidas%20sobre%20o%20NeXTBolao.'
 }
