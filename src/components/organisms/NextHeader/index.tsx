@@ -207,7 +207,7 @@ export const NextHeader = ({
             )}
           </Flex>
           <Flex display={{ base: 'none', md: 'flex' }}>
-            <DesktopNav navItems={navItems} />
+            <DesktopNav navItems={NAV_ITEMS} />
           </Flex>
           <Stack flex={{ base: 1 }} justify={'flex-end'} direction={'row'} spacing={6}>
             <HStack spacing={{ base: 3, md: 6 }}>
@@ -224,7 +224,7 @@ export const NextHeader = ({
           </Stack>
         </Flex>
         <Collapse in={isOpen} animateOpacity>
-          <MobileNav navItems={navItems} />
+          <MobileNav navItems={NAV_ITEMS} />
         </Collapse>
       </Container>
     </Box>
