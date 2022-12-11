@@ -8,13 +8,9 @@ export interface NextFeaturesProps {
   numberGrid?: number
 }
 
-const NextFeatures = ({
-  items,
-  numberGrid = 3,
-  title = 'Usamos as melhores tecnologias do mercado'
-}: NextFeaturesProps) => {
+const NextFeatures = ({ items, numberGrid = 3, title }: NextFeaturesProps) => {
   return (
-    <Container maxW="container.lg" pt={[2, 16]} pb={[16, 28]}>
+    <Container maxW="container.lg" pt={[2, 0]} pb={[16, 28]}>
       <Center pb={12}>
         <Heading>{title}</Heading>
       </Center>

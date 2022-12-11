@@ -26,13 +26,13 @@ export const NextHero = ({
   bg,
   url = '#',
   image = '/images/home/code_hero.png',
-  width = 450,
-  height = 450,
+  width = 447,
+  height = 559,
   alt = 'Imagem Hero'
 }: NextHeroProps) => {
   return (
-    <Container id={id} bg={bg} maxW="container.lg" pb={[12, 24]}>
-      <Stack minH={'70vh'} align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
+    <Container id={id} bg={bg} maxW="container.lg">
+      <Stack align={'center'} direction={{ base: 'column', md: 'row-reverse' }}>
         <Flex flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             {words && (
@@ -55,10 +55,11 @@ export const NextHero = ({
             >
               <Link href={url}>
                 <Button
+                  color="white"
                   bg={'next-primary'}
-                  width={['100%', '50%']}
                   _hover={{
-                    bg: 'next-blue.400'
+                    bg: 'next-blue.400',
+                    color: 'white'
                   }}
                 >
                   {textButton}
@@ -73,10 +74,11 @@ export const NextHero = ({
         <Box display={{ base: 'block', md: 'none' }} pt={6} pb={12}>
           <Link href={url}>
             <Button
+              color="white"
               bg={'next-primary'}
-              width={['100%', '50%']}
               _hover={{
-                bg: 'next-blue.400'
+                bg: 'next-blue.400',
+                color: 'white'
               }}
             >
               {textButton}

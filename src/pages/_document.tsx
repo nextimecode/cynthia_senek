@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="/next_ico.svg" />
+          <link rel="icon" href="/images/logos/cy_logo_degrade.png" />
           <meta name="keywords" content={layout.keywords?.join(', ')} />
           <meta property="og:url" content={layout.url} />
           <meta property="og:type" content="page" />

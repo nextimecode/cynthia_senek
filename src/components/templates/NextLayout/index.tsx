@@ -61,7 +61,22 @@ export const NextLayout = ({
         logoSubtitle={logoSubtitle}
         logoSubtitleColor={logoSubtitleColor}
       />
-      <main>{children}</main>
+      <Box
+        bgGradient="linear(to-t,
+      #db3340,
+      #f815bd,
+      #a33da3,
+      #7842a3,
+      #2657ab,
+      #2cad59,
+      #a2cf4a,
+      #fee300,
+      #faa413,
+      #f87826,
+      #f55542)"
+      >
+        <main>{children}</main>
+      </Box>
       <NextFooter />
     </Box>
   )

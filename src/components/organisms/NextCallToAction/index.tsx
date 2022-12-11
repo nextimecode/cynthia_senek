@@ -31,8 +31,8 @@ export const NextCallToAction = ({
   directionBase = 'column'
 }: NextCallToActionProps) => {
   return (
-    <Container id={id} bg={bg} maxW="container.lg" pb={[12, 8]}>
-      <Stack align={'center'} direction={{ base: directionBase, md: directionMd }}>
+    <Container id={id} bg={bg} maxW="container.lg" pb={[12, 20]}>
+      <Stack align={'center'} direction={{ base: directionBase, md: directionMd }} gap={8}>
         <Flex flex={1} align={'center'} justify={'center'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Text

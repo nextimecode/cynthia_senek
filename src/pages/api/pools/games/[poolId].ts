@@ -26,7 +26,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data | any>) {
               .filter(
                 guess => guess.userId === uid && guess.poolId === poolId && guess.gameId === game.id
               )
-            if (guesses.length > 0) {
+            if (guesses?.length > 0) {
               return {
                 ...game.data(),
                 guesses: undefined,
