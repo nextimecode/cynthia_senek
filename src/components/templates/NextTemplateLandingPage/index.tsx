@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import { NextLayout } from '../NextLayout'
 import { NextGridBlurredBackdrop } from '../../organisms/NextGridBlurredBackdrop'
 import { NextCallToAction, NextCallToActionProps } from '../../organisms/NextCallToAction'
 import { NextHero } from '../../organisms/NextHero'
-import { Container } from '@chakra-ui/react'
+import { Center, Container } from '@chakra-ui/react'
 import NextFeatures from '../../organisms/NextFeatures'
 
 export const NextTemplateLandingPage = ({ items }: any) => {
@@ -16,6 +17,9 @@ export const NextTemplateLandingPage = ({ items }: any) => {
         textButton={items.nextHeroItem.textButton}
         url={items.nextHeroItem.url}
       />
+      <Center>
+        <Image src="/images/logos/logo_footer.png" alt="NeXTIME Logo" width={300} height={300} />
+      </Center>
       <NextFeatures items={items.nextFeatureItems} title={'Essa jornada é pra você:'} />
       <Container maxW="container.lg" mb={20}>
         <NextGridBlurredBackdrop />

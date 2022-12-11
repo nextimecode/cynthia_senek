@@ -32,7 +32,7 @@ export const nextCallToActionItems = [
     id: 'mentoria',
     title: 'O que eu vou aprender em uma jornada espiritual e artística disfarçada de mentoria?',
     text: 'A ARTE. AS EMOÇÕES. O AUTOCONHECIMENTO. A ESPIRITUALIDADE. A SEXUALIDADE. E A CRIATIVIDADE SÃO CANAIS DE COMUNICAÇÃO ENTRE CÉU E TERRA. QUAL FREQUÊNCIA VOCÊ ESTÁ SINTONIZADO EM SUA VIDA? NÃO TEMOS TODOS O DOM DA CRIATIVIDADE? PORQUE ALGUMAS PESSOAS NÃO CONSEGUEM SINTONIZAR COM ELA? QUANDO SINTONIZADOS COM A SABEDORIA INTERIOR, ABRIMOS CONEXÃO COM A FONTE SUPERIOR.',
-    image: '/images/cy1.jpg',
+    image: '/images/image1.jpg',
     textButton: 'REALIZAR INSCRIÇÃO',
     url: '#mentoria',
     width: 800,
@@ -43,7 +43,7 @@ export const nextCallToActionItems = [
     id: 'app',
     title: 'Mentoria e coaching: diferença',
     text: 'O mentor é alguém experiente em determinado campo de atuação. Ele faz um aconselhamento profissional para o mentorado, ensina questões técnicas sobre a realização do trabalho, dá dicas de carreira e busca a capacitação do profissional. \n\n O coach, por sua vez, trabalha os aspectos motivacionais das pessoas. Ele busca incentivar o indivíduo a dar o melhor naquilo que faz, mas não possui, necessariamente, experiência no campo de atuação do cliente. Portanto, não cabe a ele oferecer treinamento técnico ou capacitação profissional.',
-    image: '/images/cy2.jpg',
+    image: '/images/image2.jpg',
     textButton: 'REALIZAR INSCRIÇÃO',
     url: '#investimento',
     width: 800,
@@ -58,7 +58,7 @@ export const nextCallToActionItems = [
     url: '#investimento',
     width: 800,
     height: 1200,
-    image: '/images/cy3.jpg'
+    image: '/images/image3.jpg'
   },
   {
     id: 'marketing',
