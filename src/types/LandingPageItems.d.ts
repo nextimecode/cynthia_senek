@@ -24,4 +24,5 @@ export interface LandingPageItems {
   nextCallToActionItems: Array<NextCallToActionProps>
   hasNextCallToActionWithAnnotation?: boolean
   nextHeroItem: Record<string>
+  nextFeatureItems?: Array<NextFeatureProps>
 }

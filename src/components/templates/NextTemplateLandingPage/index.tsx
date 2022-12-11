@@ -3,6 +3,7 @@ import { NextGridBlurredBackdrop } from '../../organisms/NextGridBlurredBackdrop
 import { NextCallToAction, NextCallToActionProps } from '../../organisms/NextCallToAction'
 import { NextHero } from '../../organisms/NextHero'
 import { Container } from '@chakra-ui/react'
+import NextFeatures from '../../organisms/NextFeatures'
 
 export const NextTemplateLandingPage = ({ items }: any) => {
   return (
@@ -15,6 +16,7 @@ export const NextTemplateLandingPage = ({ items }: any) => {
         textButton={items.nextHeroItem.textButton}
         url={items.nextHeroItem.url}
       />
+      <NextFeatures items={items.nextFeatureItems} title={'Essa jornada é pra você:'} />
       <Container maxW="container.lg" mb={20}>
         <NextGridBlurredBackdrop />
       </Container>

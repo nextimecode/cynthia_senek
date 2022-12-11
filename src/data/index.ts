@@ -1,3 +1,4 @@
+import { NextFeatureProps } from '../components/molecules/NextFeature'
 import { NextCallToActionProps } from '../components/organisms/NextCallToAction'
 import { LandingPageItems } from '../types/LandingPageItems'
 
@@ -72,11 +73,42 @@ export const nextCallToActionItems = [
   }
 ] as unknown as Array<NextCallToActionProps>
 
+export const nextFeatureItems = [
+  {
+    text: '“Quero destravar partes minhas adormecidas ou engessadas pelas experiências que vivi”'
+  },
+  {
+    text: '“Quero parar de ter ideias boas e não conseguir tirá-las da minha cabeça.” '
+  },
+  {
+    text: '“Quero reconhecer qual é a frequência da minha verdadeira essência”'
+  },
+  {
+    text: '“Quero ganhar consciência dos medos, inseguranças. bloqueios e travas que tenho diante de situações de nervosismo como falar em público, apresentaçõés em reuniões, gravações de vídeos ou testes de elenco por exemplo.” '
+  },
+  {
+    text: '“Quero comunicar a minha imagem e expressão artística de forma criativa, original e natural.” '
+  },
+  {
+    text: '“Quero estar aberto a reconhecer o autoconhecimento e a espiritualidade como aliados em qualquer processo de criação.”'
+  },
+  {
+    text: '“Quero mudar a minha realidade”'
+  },
+  {
+    text: '“Quero parar de me sentir incapaz toda vez que sinto vontade de fazer algo criativo como atuar, cantar, pintar ou criar algum projeto.”'
+  },
+  {
+    text: '“Quero viver aquilo que a minha alma veio realmente viver.”'
+  }
+] as unknown as Array<NextFeatureProps>
+
 export const hasNextCallToActionWithAnnotation = false
 
 export const items: LandingPageItems = {
   layout,
   hasNextCallToActionWithAnnotation,
   nextCallToActionItems,
-  nextHeroItem
+  nextHeroItem,
+  nextFeatureItems
 }
