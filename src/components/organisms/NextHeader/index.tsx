@@ -178,7 +178,7 @@ type Props = {
 
 export const NextHeader = ({
   logoSrc = '/images/logos/logo_nextime.svg',
-  logoWidth = 350,
+  logoWidth = 250,
   logoHeight = 150,
   logoAlt = 'Cynthia Senek Logo',
   logoSubtitle,
@@ -199,7 +199,9 @@ export const NextHeader = ({
             />
           </Flex>
           <Flex alignItems={'center'}>
-            <Image src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight} />
+            <Box py={2}>
+              <Image src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight} />
+            </Box>
             {logoSubtitle && (
               <Text fontSize={{ base: 'lg', lg: 'xl' }} color={logoSubtitleColor}>
                 {logoSubtitle}
