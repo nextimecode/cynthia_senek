@@ -15,7 +15,7 @@ const NextFeatures = ({ items, numberGrid = 3, title }: NextFeaturesProps) => {
         <Heading>{title}</Heading>
       </Center>
       <Box p={4}>
-        <SimpleGrid columns={{ base: 3, md: numberGrid }} spacing={10}>
+        <SimpleGrid columns={{ base: 1, md: numberGrid }} spacing={10}>
           {items?.map((item, index) => (
             <NextFeature
               key={index}
